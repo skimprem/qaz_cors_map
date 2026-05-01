@@ -37,16 +37,20 @@ gdf = gpd.GeoDataFrame(
 )
 
 index_map = kazakhstan.explore(
-    color='grey',
-    linewidth=8,
+    color='none',
     tiles='CartoDB positron',
     zoom_start=5,
-    tooltip=False
+    tooltip=False,
+    style_kwds={
+    "color": "black",     # Set border (edge) color to black
+    "weight": 2,          # Increase border thickness
+    "fillOpacity": 0.6    # Transparency of the fill
+    }
 )
 
 gdf.explore(
     m=index_map,
-    color='red',
+    color='green',
     marker_kwds={'radius': 5},
     tooltip=['station_name'],
     popup=True
