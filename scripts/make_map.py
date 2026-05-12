@@ -50,17 +50,7 @@ index_map = kazakhstan.explore(
     }
 )
 
-gdf.explore(
-    m=index_map,
-    column='block',
-    cmap='Set1',
-    marker_kwds={'radius': 5},
-    tooltip=['station_name', 'block'],
-    popup=True,
-    legend=False
-)
-
-# Добавляем прямоугольники для каждого блока
+# Добавляем прямоугольники для каждого блока ПЕРЕД маркерами
 margin = 0.5  # отступ в градусах
 for block_id in gdf['block'].unique():
     if pd.isna(block_id):
@@ -91,5 +81,15 @@ for block_id in gdf['block'].unique():
         weight=2,
         popup=folium.Popup(popup_html, max_width=300)
     ).add_to(index_map)
+
+gdf.explore(
+    m=index_map,
+    column='block',
+    cmap='Set1',
+    marker_kwds={'radius': 5},
+    tooltip=['station_name', 'block'],
+    popup=True,
+    legend=False
+)
 
 index_map.save('index.html')
