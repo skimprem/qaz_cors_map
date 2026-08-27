@@ -42,19 +42,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const modal = document.getElementById('modal')
   const modalImg = document.getElementById('modal-img')
-  const modalPdf = document.getElementById('modal-pdf')
   const modalClose = document.getElementById('modal-close')
   modalClose.addEventListener('click', closeModal)
 
   function openModal(img, pdf) {
     modalImg.src = img
-    modalPdf.href = pdf
     modal.classList.remove('hidden')
   }
   function closeModal() {
     modal.classList.add('hidden')
     modalImg.src = ''
-    modalPdf.href = '#'
   }
 
   // create or remove a details row after the given row

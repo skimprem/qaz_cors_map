@@ -29,6 +29,7 @@ except Exception:
 
 
 ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(Path(__file__).resolve().parent))
 CSV_IN = ROOT / 'data' / 'processed' / 'candidates_summary' / 'candidates_summary.csv'
 WEB_DIR = ROOT / 'data' / 'web'
 IMG_DIR = WEB_DIR / 'station_images'
@@ -54,63 +55,11 @@ def write_json():
             header = tf.readline().strip()
             template_fields = [c.strip() for c in header.split(',') if c.strip()]
 
-    # try to read existing stations Excel to supplement fields
-    excel_path = ROOT / 'data' / 'stations' / 'cors_stations_complete_20260224_145419.xlsx'
-    excel_map = {}
-    if excel_path.exists():
-        try:
-            xdf = pd.read_excel(excel_path, dtype=str)
-            # heuristics: find station code column
-            cols = [c for c in xdf.columns]
-            code_col = None
-            for c in cols:
-                lc = c.lower()
-                if 'station' in lc or 'code' in lc or 'station_name' in lc:
-                    code_col = c
-                    break
-            # find common columns
-            lat_col = next((c for c in cols if 'lat' in c.lower()), None)
-            lon_col = next((c for c in cols if 'lon' in c.lower()), None)
-            h_col = next((c for c in cols if 'height' in c.lower() or 'ellip' in c.lower()), None)
-            ant_col = next((c for c in cols if 'antenna' in c.lower()), None)
-            rec_col = next((c for c in cols if 'receiver' in c.lower()), None)
-            op_col = next((c for c in cols if 'operator' in c.lower() or 'institution' in c.lower()), None)
-            email_col = next((c for c in cols if 'email' in c.lower()), None)
-            sitelog_col = next((c for c in cols if 'sitelog' in c.lower() or 'site log' in c.lower()), None)
-
-            for _, xr in xdf.fillna('').iterrows():
-                if code_col is None:
-                    continue
-                code_raw = str(xr.get(code_col, '')).strip()
-                if not code_raw:
-                    continue
-                # normalize station code: take first 4 letters/digits
-                import re
-                m = re.match(r'([A-Z0-9]{4})', code_raw.upper())
-                if m:
-                    code = m.group(1)
-                else:
-                    # try to strip trailing '00KAZ' suffix
-                    code = code_raw.upper().replace('00KAZ', '').strip()[:4]
-                excel_map[code] = {}
-                if lat_col:
-                    excel_map[code]['Latitude_deg'] = xr.get(lat_col, '')
-                if lon_col:
-                    excel_map[code]['Longitude_deg'] = xr.get(lon_col, '')
-                if h_col:
-                    excel_map[code]['Ellipsoidal_height_m'] = xr.get(h_col, '')
-                if ant_col:
-                    excel_map[code]['Antenna_model'] = xr.get(ant_col, '')
-                if rec_col:
-                    excel_map[code]['Receiver_model'] = xr.get(rec_col, '')
-                if op_col:
-                    excel_map[code]['Operator_institution'] = xr.get(op_col, '')
-                if email_col:
-                    excel_map[code]['Contact_email'] = xr.get(email_col, '')
-                if sitelog_col:
-                    excel_map[code]['SiteLog_URL'] = xr.get(sitelog_col, '')
-        except Exception as e:
-            print('Failed to read stations excel:', e)
+    # fetch station metadata directly from the SLM public API
+    from slm_api import get_stations, build_station_map
+    stations = get_stations()
+    excel_map = build_station_map(stations)
+    print(f'Loaded {len(excel_map)} stations from SLM API')
 
     records = []
     for _, row in df.iterrows():

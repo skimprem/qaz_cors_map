@@ -1,9 +1,13 @@
 /.venv
 /countries.zip
 .env
+__pycache__/
+*.pyc
 # Local-only instructions and notes
 instructions/
 data/chat.md
 # Rui's report sources (keep local)
 data/report/
 assets/config.js
+# generated/cropped thumbnails script output (images will be modified in-place)
+# (keep images in repo if you want; script runs locally)

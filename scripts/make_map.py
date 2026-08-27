@@ -1,36 +1,36 @@
-import os
+import json
+from pathlib import Path
+
 import pandas as pd
 import geopandas as gpd
 import requests
 import zipfile
 import folium
 
-url = "https://naturalearth.s3.amazonaws.com/110m_cultural/ne_110m_admin_0_countries.zip"
-zip_path = "countries.zip"
-extract_path = "data/ne_countries"
+ROOT = Path(__file__).resolve().parents[1]
 
-if not os.path.exists(extract_path):
-    os.makedirs(extract_path, exist_ok=True)
-    r = requests.get(url)
+url = "https://naturalearth.s3.amazonaws.com/110m_cultural/ne_110m_admin_0_countries.zip"
+zip_path = ROOT / "countries.zip"
+extract_path = ROOT / "data" / "ne_countries"
+shapefile_path = extract_path / "ne_110m_admin_0_countries.shp"
+
+if not shapefile_path.exists():
+    extract_path.mkdir(parents=True, exist_ok=True)
+    r = requests.get(url, timeout=30)
+    r.raise_for_status()
     with open(zip_path, "wb") as f:
         f.write(r.content)
 
     with zipfile.ZipFile(zip_path, 'r') as zip_ref:
         zip_ref.extractall(extract_path)
+    zip_path.unlink()
 
-world = gpd.read_file(f"{extract_path}/ne_110m_admin_0_countries.shp")
+world = gpd.read_file(shapefile_path)
 kazakhstan = world[world['ADMIN'] == 'Kazakhstan']
 
-source_path = os.path.join(
-    os.path.expanduser('~'),
-    'gitrepo',
-    'qaz_cors_map',
-    'data',
-    'stations',
-    'cors_stations_complete_20260224_145419_with_blocks.xlsx'
-)
-
-df = pd.read_excel(source_path)
+source_path = ROOT / 'data' / 'stations' / 'cors_stations_complete_20260224_145419_with_blocks.json'
+with open(source_path, 'r', encoding='utf-8') as f:
+    df = pd.DataFrame(json.load(f))
 
 gdf = gpd.GeoDataFrame(
     df,
@@ -68,7 +68,7 @@ for block_id in gdf['block'].unique():
     bounds = [[min_lat, min_lon], [max_lat, max_lon]]
     
     # HTML для попапа прямоугольника
-    popup_html = f'<b>Block {block_id}</b><br>'
+    popup_html = f'<b>Block {int(block_id)}</b><br>'
     if pic_file:
         popup_html += f'<a href="{pic_file}" target="_blank">View Block Image</a>'
     
@@ -92,4 +92,4 @@ gdf.explore(
     legend=False
 )
 
-index_map.save('index.html')
+index_map.save(ROOT / 'index.html')
