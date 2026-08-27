@@ -1,0 +1,14 @@
+{
+  "pdf": "/home/roman/gitrepo/qaz_cors_map/data/report/QGEO-KZ_Preliminary_Stability_Assessment_MIRASpaco.pdf",
+  "tables_csv": [
+    "/home/roman/gitrepo/qaz_cors_map/data/processed/QGEO-KZ_Preliminary_Stability_Assessment_MIRASpaco/table_page003_idx01.csv",
+    "/home/roman/gitrepo/qaz_cors_map/data/processed/QGEO-KZ_Preliminary_Stability_Assessment_MIRASpaco/table_page004_idx01.csv",
+    "/home/roman/gitrepo/qaz_cors_map/data/processed/QGEO-KZ_Preliminary_Stability_Assessment_MIRASpaco/table_page005_idx01.csv",
+    "/home/roman/gitrepo/qaz_cors_map/data/processed/QGEO-KZ_Preliminary_Stability_Assessment_MIRASpaco/table_page006_idx01.csv",
+    "/home/roman/gitrepo/qaz_cors_map/data/processed/QGEO-KZ_Preliminary_Stability_Assessment_MIRASpaco/table_page006_idx02.csv",
+    "/home/roman/gitrepo/qaz_cors_map/data/processed/QGEO-KZ_Preliminary_Stability_Assessment_MIRASpaco/table_page007_idx01.csv"
+  ],
+  "pages_text": "/home/roman/gitrepo/qaz_cors_map/data/processed/QGEO-KZ_Preliminary_Stability_Assessment_MIRASpaco/pages_text.txt",
+  "num_tables": 6,
+  "num_pages": 9
+}
