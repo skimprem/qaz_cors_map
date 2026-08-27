@@ -200,9 +200,26 @@ def write_json():
                 if v.get('uncertainty'):
                     rec[k + '_uncertainty'] = v.get('uncertainty')
 
+    # deduplicate records by StationCode (or Site) keeping non-empty fields
+    deduped = {}
+    for rec in records:
+        code = (rec.get('StationCode') or rec.get('Site') or '').upper()
+        if not code:
+            # fallback to source_file or unique id
+            code = rec.get('source_file', '') + '|' + rec.get('Site', '')
+        if code not in deduped:
+            deduped[code] = dict(rec)
+        else:
+            exist = deduped[code]
+            for k, v in rec.items():
+                if (exist.get(k) in (None, '') ) and v not in (None, ''):
+                    exist[k] = v
+            deduped[code] = exist
+
+    out_records = list(deduped.values())
     out = WEB_DIR / 'candidates.json'
     with open(out, 'w', encoding='utf-8') as f:
-        json.dump(records, f, ensure_ascii=False, indent=2)
+        json.dump(out_records, f, ensure_ascii=False, indent=2)
     print('Wrote', out)
     return True
 
