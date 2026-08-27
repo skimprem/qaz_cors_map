@@ -44,6 +44,13 @@
                 }
             </style>
 
+            <!-- Desaturate map tiles for a low-contrast gray style -->
+            <style>
+            .leaflet-container img {
+                filter: grayscale(100%) contrast(90%) brightness(97%);
+            }
+            </style>
+
             <script>
                 L_NO_TOUCH = false;
                 L_DISABLE_3D = false;
