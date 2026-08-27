@@ -99,7 +99,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const uncField = f.replace(/_mm_per_yr$/, '') + '_uncertainty_mm_per_yr'
         const unc = record[uncField]
         if (base && unc) {
-          val.textContent = base + ' +/- ' + unc
+          val.textContent = base + ' ± ' + unc
         } else if (base) {
           val.textContent = base
         } else {
