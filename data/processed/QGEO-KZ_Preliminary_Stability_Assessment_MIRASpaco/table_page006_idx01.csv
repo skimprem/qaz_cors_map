@@ -1,0 +1,6 @@
+,Software,GipsyX/RTGx
+Processing strategy,,Independent 24-hour static PPP solution for each station
+Precise products,,JPL final GNSS orbit and clock products and associated models
+Reference-frame mapping,,Daily non-fiducial solutions mapped using the seven-parameter transformation
+Daily output,,"One Cartesian position per successfully processed station and day, subsequently
+expressed as local North, East and Up components"

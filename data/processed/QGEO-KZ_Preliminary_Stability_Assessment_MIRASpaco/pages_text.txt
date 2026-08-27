@@ -1,0 +1,286 @@
+--- PAGE 1 ---
+TECHNICAL REPORT
+Assessment of the Stability of the
+QGEO-KZ GNSS Network
+Prepared by:
+Rui Fernandes
+Prepared for: QGEO
+Date: 22 July 2026
+Status: First computation - preliminary results
+
+--- PAGE 2 ---
+Report – QGEO-KZ – Preliminary Stability Assessment
+Executive Summary
+This report presents an initial assessment of the temporal stability of the QGEO-KZ GNSS
+stations. The main objective is to identify the stations showing the most promising behaviour
+for more detailed evaluation as potential candidates for submission to the International GNSS
+Service (IGS).
+Daily coordinate solutions were obtained with GipsyX and the resulting North, East and Up
+coordinate time series were analysed with Hector. The analysis considers data continuity,
+coordinate scatter, offsets, anomalous intervals, estimated velocities and consistency with
+the regional velocity field.
+The initial network list contains 87 stations. A minimum observation span of 2.5 years was
+adopted and the position and velocity solutions were referred to 1 January 2025. Most of the
+QGEO series cover approximately three to four years, principally from June 2022 to July 2026.
+Horizontal velocities relative to the Eurasian plate were calculated to provide an initial
+assessment of network consistency and to identify anomalous station behaviour. The resulting
+field can also support a future evaluation of long-term internal deformation, but the present
+solution should not yet be interpreted as a definitive deformation model.
+More robust results can be obtained after identified processing discontinuities are investigated
+and corrected and as longer coordinate time series become available. This report addresses
+coordinate stability only. Other technical and operational requirements would need to be
+evaluated separately before any station is proposed to the IGS.
+1. Introduction
+1.1 Background
+Within the technical collaboration with QGEO, an initial analysis of the QGEO-KZ GNSS
+network was performed to evaluate the temporal behaviour of its stations. This is the first
+systematic computation of daily coordinate time series and station velocities prepared within
+this collaboration.
+The purpose is to identify the stations with the most promising coordinate behaviour for
+possible future consideration as IGS stations. The present analysis is an initial screening and
+does not constitute a final selection or an application to the IGS.
+MIRASpaco – QGEO – July 2026 2
+
+--- PAGE 3 ---
+Report – QGEO-KZ – Preliminary Stability Assessment
+1.2 Objectives
+The analysis evaluates the availability and continuity of the observations, the stability of the
+North, East and Up coordinate components, the reliability of preliminary velocity estimates,
+and the consistency of horizontal velocities after removal of the predicted Eurasian plate
+motion.
+Together, these indicators provide a first basis for distinguishing the most promising stations
+from stations requiring additional investigation before any further IGS-related assessment.
+1.3 Scope and limitations
+The current evaluation is based on coordinate time-series behaviour and the preliminary
+velocity field. Most station records span only three to four years, so the velocity estimates
+remain sensitive to offsets, anomalous periods and processing discontinuities. The results will
+become more robust as the observation span increases and the identified discontinuities are
+resolved.
+2. QGEO-KZ Data Set
+2.1 Network overview
+Table 1 – General information about the QGEO Analysis
+Initial network list 87 stations
+Minimum time span 2.5 years
+Stations meeting the span criterion 85 in the Hector analysis
+Reference epoch 1 January 2025
+Typical QGEO observation period June 2022 to July 2026
+PARK and EGAN were excluded from the QGEO-specific interpretation because their four-
+character identifiers duplicate existing station names. Station identifiers must be unique
+before any future exchange or submission of station products.
+2.2 Data availability
+For each station, the processing inventory records the first and last observation dates, total
+time span, number of available files, number of successfully processed files and number of
+unsuccessful or unavailable solutions. Most stations provide sufficiently dense daily series for
+an initial stability assessment, although some contain significant gaps or periods of reduced
+availability.
+MIRASpaco – QGEO – July 2026 3
+
+--- PAGE 4 ---
+Report – QGEO-KZ – Preliminary Stability Assessment
+The station-by-station observation and processing availability for all 85 stations meeting the
+2.5-year span criterion is listed below. The initial network list contains 87 stations.
+Table 2 – Observation and processing availability for the 85 stations entering the initial Hector analysis
+Span
+Site First obs. Last obs. Available Processed Not estimated No solution
+(yr)
+AALA 28-06-2022 11-07-2026 4.0 1382 1368 14 0
+ATAL 31-08-2022 11-07-2026 3.9 1341 1304 37 0
+BBAL 04-01-2023 11-07-2026 3.5 975 949 7 0
+BKEG 27-06-2022 11-07-2026 4.0 1075 1065 10 0
+BSAR 04-01-2023 10-07-2026 3.5 870 860 7 0
+BUSH 27-06-2022 11-07-2026 4.0 1305 1293 12 0
+BZHK 27-06-2022 11-07-2026 4.0 1224 1212 12 0
+CATB 28-06-2022 11-07-2026 4.0 1160 1142 11 1
+CBST 28-06-2022 11-07-2026 4.0 1233 1217 15 0
+CERM 28-06-2022 11-07-2026 4.0 1172 1160 11 0
+CKSH 28-06-2022 21-06-2026 4.0 1278 1266 12 0
+DAKT 27-06-2022 11-07-2026 4.0 1202 1192 10 0
+DBOZ 28-06-2022 11-07-2026 4.0 1423 1411 12 0
+DEMB 28-06-2022 11-07-2026 4.0 1237 1172 65 0
+DKOM 22-09-2022 11-07-2026 3.8 1033 1020 9 0
+DSHL 28-06-2022 11-07-2026 4.0 1321 1304 17 0
+DYRG 27-06-2022 11-07-2026 4.0 1423 1402 20 0
+DZHN 03-08-2022 11-07-2026 3.9 1326 1311 14 0
+DZHR 09-09-2022 11-07-2026 3.8 1259 1242 15 0
+EATR 28-06-2022 11-07-2026 4.0 1345 1332 12 0
+EIND 28-06-2022 11-07-2026 4.0 1404 1381 23 0
+EKRB 29-06-2022 11-07-2026 4.0 1348 1328 18 0
+EKUL 27-06-2022 06-07-2026 4.0 992 981 10 0
+FAJG 27-06-2022 11-07-2026 4.0 1229 1205 12 1
+FAKS 27-06-2022 05-07-2026 4.0 1117 1101 11 0
+FCKP 18-10-2022 28-06-2026 3.7 1125 1114 10 0
+FKRA 01-07-2022 11-07-2026 4.0 1345 1333 12 0
+FKTK 25-07-2022 11-07-2026 4.0 696 687 9 0
+FOSK 06-02-2023 29-06-2026 3.4 829 822 5 0
+FSEM 27-06-2022 29-06-2026 4.0 1179 1167 12 0
+FZAY 28-06-2022 11-07-2026 4.0 1077 1067 10 0
+HMYA 12-09-2022 15-03-2026 3.5 1124 1110 11 0
+HSHO 28-06-2022 11-07-2026 4.0 1352 1331 20 0
+HTAR 09-08-2022 24-05-2026 3.8 1022 1012 7 0
+HULB 28-06-2022 11-07-2026 4.0 1227 1202 20 0
+HZHN 14-03-2023 15-04-2026 3.1 839 835 3 0
+LAKS 28-06-2022 11-07-2026 4.0 1190 1177 12 0
+LCHP 08-08-2022 11-07-2026 3.9 1262 1250 11 0
+LKRT 15-08-2022 11-07-2026 3.9 1253 1242 11 0
+LKZT 12-08-2022 11-07-2026 3.9 1017 996 16 0
+LORA 28-06-2022 11-07-2026 4.0 1419 1386 33 0
+LSAY 29-09-2022 11-07-2026 3.8 1155 1120 24 0
+MIRASpaco – QGEO – July 2026 4
+
+--- PAGE 5 ---
+Report – QGEO-KZ – Preliminary Stability Assessment
+Span
+Site First obs. Last obs. Available Processed Not estimated No solution
+(yr)
+LZHK 15-08-2022 11-07-2026 3.9 1192 1162 26 0
+MAKD 01-09-2022 21-06-2026 3.8 1169 1156 10 0
+MAKT 28-06-2022 11-07-2026 4.0 1355 1338 12 0
+MBRS 28-06-2022 11-07-2026 4.0 1411 1396 12 0
+MKKL 01-07-2022 11-07-2026 4.0 1291 1279 12 0
+MKRG 27-06-2022 11-07-2026 4.0 1259 1244 12 1
+MKRJ 28-06-2022 11-07-2026 4.0 1434 1422 12 0
+MKSK 28-06-2022 11-07-2026 4.0 1156 1138 15 0
+MSAS 28-06-2022 11-07-2026 4.0 1334 1315 19 0
+MSAT 28-06-2022 11-07-2026 4.0 1408 1384 24 0
+MSYA 30-06-2022 11-07-2026 4.0 1284 1259 25 0
+NARS 12-07-2022 11-07-2026 4.0 1165 1154 8 0
+NKZR 04-01-2023 11-07-2026 3.5 781 770 4 0
+NQZL 27-08-2022 11-07-2026 3.9 970 959 10 0
+NZHG 25-07-2022 01-07-2026 3.9 1161 1135 23 0
+NZHS 28-06-2022 11-07-2026 4.0 880 579 13 0
+PKOS 27-06-2022 29-03-2026 3.8 1222 1210 11 0
+PKRB 28-06-2022 11-07-2026 4.0 1353 1341 12 0
+PKRM 28-06-2022 11-07-2026 4.0 1034 933 33 11
+PTRG 29-06-2022 11-07-2026 4.0 971 956 12 0
+PUZK 28-06-2022 11-07-2026 4.0 1359 1342 17 0
+PZHT 07-12-2022 11-07-2026 3.6 1135 1130 5 0
+RAKT 28-06-2022 11-07-2026 4.0 1317 1303 14 0
+RBEY 28-06-2022 21-06-2026 4.0 1263 1015 248 0
+RBLS 28-06-2022 11-07-2026 4.0 1117 1104 12 0
+RJNO 01-07-2022 11-07-2026 4.0 1108 1094 5 1
+RKYZ 04-01-2023 11-07-2026 3.5 996 991 3 0
+RTSH 28-06-2022 10-07-2026 4.0 869 849 10 0
+SBYA 12-07-2022 11-07-2026 4.0 1015 1006 7 0
+SEKB 27-06-2022 21-06-2026 4.0 1300 1288 12 0
+SJLZ 22-08-2022 11-07-2026 3.9 1038 1027 11 0
+SPAV 05-09-2022 11-07-2026 3.8 954 936 5 0
+SSHB 17-11-2022 11-07-2026 3.6 1174 1168 5 0
+TNIS 28-06-2022 11-07-2026 4.0 1380 1371 9 0
+TPET 04-01-2023 11-07-2026 3.5 951 942 7 0
+TTLS 28-06-2022 11-07-2026 4.0 1168 1158 10 0
+XKZE 28-06-2022 10-07-2026 4.0 1041 1028 9 0
+XSHM 28-06-2022 11-07-2026 4.0 1231 1217 11 0
+XTUR 28-06-2022 11-07-2026 4.0 1412 1401 11 0
+XZHT 28-06-2022 11-07-2026 4.0 1315 1287 19 0
+ZNUR 28-06-2022 11-07-2026 4.0 1375 1364 11 0
+MIRASpaco – QGEO – July 2026 5
+
+--- PAGE 6 ---
+Report – QGEO-KZ – Preliminary Stability Assessment
+3. Processing with GipsyX
+3.1 Daily coordinate processing
+The available daily RINEX observation files were processed independently for each station with
+GipsyX/RTGx using the Precise Point Positioning (PPP) strategy. The principal elements of the
+processing are summarised below.
+Table 3 – Summary of GipsyX processing
+Software GipsyX/RTGx
+Processing strategy Independent 24-hour static PPP solution for each station
+Precise products JPL final GNSS orbit and clock products and associated models
+Reference-frame mapping Daily non-fiducial solutions mapped using the seven-parameter transformation
+One Cartesian position per successfully processed station and day, subsequently
+Daily output
+expressed as local North, East and Up components
+4. Time-Series Analysis with Hector
+4.1 Analysis approach
+Hector was used to estimate the long-term coordinate trend and its uncertainty from the daily
+North, East and Up time series. The reference epoch was set to 1 January 2025 and only
+stations with at least 2.5 years of observations entered the initial network analysis.
+The interpretation considers the complete behaviour of the three components. The horizontal
+components are particularly important for evaluating long-term positional consistency, while
+the Up component generally presents greater scatter and is more sensitive to discontinuities.
+4.2 Preliminary assessment criteria
+Table 4 – Assessment Criteria
+Continuity Length and completeness of the daily coordinate series
+Repeatability Scatter of the North, East and Up residuals
+Discontinuities Offsets or anomalous intervals affecting the fitted trend
+Velocity reliability Magnitude and uncertainty of the estimated trend
+Regional consistency Agreement with neighbouring stations and the Eurasia-relative field
+MIRASpaco – QGEO – July 2026 6
+
+--- PAGE 7 ---
+Report – QGEO-KZ – Preliminary Stability Assessment
+5. Preliminary Station-Stability Results
+5.1 General behaviour
+The majority of the QGEO-KZ stations provide multi-year coordinate series that can support an
+initial assessment of horizontal stability. The series nevertheless show different levels of
+scatter, data completeness and sensitivity to discontinuities. A detailed review of the
+individual plots is therefore required before a shortlist of potential IGS candidates is
+established.
+The complete set of station plots is supplied separately as Annex A. It provides the evidence
+for the station-by-station assessment and allows the horizontal and vertical behaviour to be
+evaluated independently.
+At this stage, the stations listed below require immediate review. A shortlist of the most
+promising stations will be prepared only after the complete set of coordinate time series has
+been assessed consistently.
+5.2 Stations requiring immediate review
+Table 5 – Stations with major problems
+Station Preliminary status Observation
+Velocity/covariance solution not Review the coordinate series and identify the interval
+DKOM
+accepted responsible for the unrealistic preliminary estimate.
+Velocity/covariance solution not Review the anomalous coordinate behaviour before attempting
+HMYA
+accepted a new velocity estimate.
+The four-character identifier duplicates an existing station name
+EGAN Excluded
+and the preliminary solution was not retained.
+The four-character identifier duplicates an existing station name
+PARK Excluded
+and the preliminary solution was not retained.
+Flagged in the Eurasia-relative The current relative motion is inconsistent with the general
+LZHK
+field network pattern and requires further analysis.
+Flagged in the Eurasia-relative The current relative motion is inconsistent with the general
+RBLS
+field network pattern and requires further analysis.
+Flagged in the Eurasia-relative The current relative motion is inconsistent with the general
+XSHM
+field network pattern and requires further analysis.
+MIRASpaco – QGEO – July 2026 7
+
+--- PAGE 8 ---
+Report – QGEO-KZ – Preliminary Stability Assessment
+6. Motions Relative to the Eurasian Plate
+The predicted rigid motion of the Eurasian plate was removed from the estimated horizontal
+velocities. The residual vectors provide an initial view of the internal consistency of the network
+and highlight stations whose behaviour differs from the regional pattern.
+Figure 1. Preliminary horizontal velocities of the QGEO-KZ stations relative to the Eurasian plate. The reference vector
+is 5 mm/yr. Red symbols identify stations flagged and excluded from the current interpretation.
+6.1 Preliminary interpretation
+The Eurasia-relative field permits comparison of neighbouring stations after removal of the
+dominant rigid plate motion. Stations with coherent residual velocities provide greater
+confidence in the internal consistency of the network, while isolated or unusually large vectors
+require comparison with the corresponding coordinate time series.
+The present field also provides a basis for evaluating possible long-term internal deformation.
+However, the relatively short observation span and the presence of unresolved processing
+discontinuities mean that no definitive deformation interpretation should yet be made.
+7. Preliminary Conclusions
+This first computation demonstrates that the QGEO-KZ observations can be used to construct
+multi-year daily coordinate time series and a regional velocity field. The analysis provides an
+initial basis for identifying the stations with the most promising long-term behaviour and for
+separating them from stations requiring further investigation.
+MIRASpaco – QGEO – July 2026 8
+
+--- PAGE 9 ---
+Report – QGEO-KZ – Preliminary Stability Assessment
+The current results remain preliminary. The next assessment should address the identified
+discontinuities, review the anomalous station solutions and update the velocity estimates as
+additional observations become available. Only after this refinement should a shortlist be
+considered for a broader evaluation against the complete technical and operational
+expectations applicable to IGS stations.
+Annex A - Complete Station Coordinate Time Series
+The separate annex QGEO-KZ.pdf contains the North, East and Up coordinate time series for
+all analysed stations, together with the fitted trends and preliminary velocity estimates. These
+plots provide the principal evidence for the individual station-stability assessment.
+MIRASpaco – QGEO – July 2026 9
+

@@ -1,0 +1,459 @@
+[
+  {
+    "station_pdf": "data/stations/QGEO-KZ-1.pdf",
+    "method": "positioned",
+    "values": {
+      "V_N_mm_per_yr": {
+        "value": "0.78",
+        "uncertainty": "1.13",
+        "match": "trend = 0.78 +_ 1.13 mm/yr"
+      },
+      "V_E_mm_per_yr": {
+        "value": "1.37",
+        "uncertainty": "0.76",
+        "match": "trend = 1.37 +_ 0.76 mm/yr"
+      },
+      "V_U_mm_per_yr": {
+        "value": "0.23",
+        "uncertainty": "1.19",
+        "match": "trend = 0.23 +_ 1.19 mm/yr"
+      }
+    },
+    "snippet": "trend = 0.78 +_ 1.13 mm/yr\ntrend = 1.37 +_ 0.76 mm/yr\ntrend = 0.23 +_ 1.19 mm/yr\ntrend = 4.48 +_ 0.73 mm/yr\ntrend = 0.78 +_ 0.66 mm/yr\ntrend = 2.29 +_ 1.81 mm/yr\ntrend = 0.81 +_ 0.63 mm/yr\ntrend = 3.39 +_ 0.89 mm/yr\ntrend = 3.20 +_ 0.65 mm/yr\ntrend = 2.33 +_ 0.54 mm/yr\ntrend = 1.36 +_ 0.81 mm/yr\ntrend = 2.05 +_ 0.90 mm/yr\ntrend = 5.36 +_ 0.80 mm/yr\ntrend = 4.94 +_ 0.72 mm/yr\ntrend = 5.65 +_ 0.77 mm/yr\ntrend = 5.60 +_ 3.51 mm/yr\ntrend = 4.14 +_ 1.23 mm/yr\ntrend = 4.28 +_ 0.94 mm/yr\ntrend = 7.20 +_ 1.19 mm/yr\ntrend = 5.49 +_ 1.08 mm/yr\ntrend = 7.17 +_ 0.87 mm/yr\ntrend = 212949565.71 +_ 183719412.59 mm/yr\ntrend = 6.59 +_ 0.88 mm/yr\ntrend = 5.93 +_ 1.25 mm/yr\ntrend = 5.39 +_ 0.60 mm/yr\ntrend = 0.60 +_ 0.71 mm/yr\ntrend = 0.51 +_ 0.55 mm/yr\ntrend = 0.72 +_ 0.92 mm/yr\ntrend = 0.23 +_ 1.69 mm/yr\ntrend = 0.03 +_ 1.03 mm/yr\ntrend = 2.05 +_ 0.62 mm/yr\ntrend = 0.73 +_ 0.60 mm/yr\ntrend = 1.08 +_ 0.71 mm/yr\ntrend = 566781.30 +_ 63200.46 mm/yr\ntrend = 0.82 +_ 0.82 mm/yr\ntrend = 1.98 +_ 0.93 mm/yr\ntrend = 1.76 +_ 0.65 mm/yr\ntrend = 1.45 +_ 0.96 mm/yr\ntrend = 6.64 +_ 0.46 mm/yr\ntrend = 7.02 +_ 0.74 mm/yr\ntrend = 6.11 +_ 1.28 mm/yr\ntrend = 7.42 +_ 0.68 mm/yr\ntrend = 7.38 +_ 1.00 mm/yr\ntrend = 7.59 +_ 0.63 mm/yr\ntrend = 4.86 +_ 3.77 mm/yr\ntrend = 2.71 +_ 1.10 mm/yr\ntrend = 0.53 +_ 0.67 mm/yr\ntrend = 1.84 +_ 0.45 mm/yr\ntrend = 1.54 +_ 0.91 mm/yr\ntrend = 0.62 +_ 0.56 mm/yr\ntrend = 2.47 +_ 0.85 mm/yr\ntrend = 5.16 +_ 0.92 mm/yr\ntrend = 0.39 +_ 0.50 mm/yr\ntrend = 2.59 +_ 0.82 mm/yr\ntrend = 0.14 +_ 0.74 mm/yr\ntrend = 4.71 +_ 1.15 mm/yr\ntrend = 3.51 +_ 0.81 mm/yr\ntrend = 3.42 +_ 0.63 mm/yr\ntrend = 2.94 +_ 0.67 mm/yr\ntrend = 3.21 +_ 0.41 mm/yr\ntrend = 55.36 +_ 1.02 mm/yr\ntrend = 3.91 +_ 0.64 mm/yr\ntrend = 3.69 +_ 1.60 mm/yr\ntrend = 4.72 +_ 1.73 mm/yr\ntrend = 3.21 +_ 0.48 mm/yr\ntrend = 3.46 +_ 0.97 mm/yr\ntrend = 4.24 +_ 0.73 mm/yr\ntrend = 7.12 +_ 0.85 mm/yr\ntrend = 5.89 +_ 0.48 mm/yr\ntrend = 7.96 +_ 0.47 mm/yr\ntrend = 8.28 +_ 0.48 mm/yr\ntrend = 6.22 +_ 0.95 mm/yr\ntrend = 7.31 +_ 0.51 mm/yr\ntrend = 0.36 +_ 1.31 mm/yr\ntrend = 0.73 +_ 0.70 mm/yr\ntrend = 0.44 +_ 0.79 mm/yr\ntrend = 0.21 +_ 0.99 mm/yr\ntrend = 1.17 +_ 0.78 mm/yr\ntrend = 4.54 +_ 1.51 mm/yr\ntrend = 1.83 +_ 0.52 mm/yr\ntrend = 1.40 +_ 0.67 mm/yr\ntrend = 3.19 +_ 0.79 mm/yr\ntrend = 1.82 +_ 0.87 mm/yr\ntrend = 3.31 +_ 0.84 mm/yr\ntrend = 4.17 +_ 1.20 mm/yr\ntrend = 2.14 +_ 1.10 mm/yr\ntrend = 28.70 +_ 0.25 mm/yr\ntrend = 28.78 +_ 0.36 mm/yr\ntrend = 28.05 +_ 0.25 mm/yr\ntrend = 29.58 +_ 0.32 mm/yr\ntrend = 27.75 +_ 0.62 mm/yr\ntrend = 30.26 +_ 1.52 mm/yr\ntrend = 27.99 +_ 0.34 mm/yr\ntrend = 28.87 +_ 0.43 mm/yr\ntrend = 26.30 +_ 0.35 mm/yr\ntrend = 26.19 +_ 0.22 mm/yr\ntrend = 26.79 +_ 0.30 mm/yr\ntrend = 26.45 +_ 0.29 mm/yr\ntrend = 25.96 +_ 0.38 mm/yr\ntrend = 26.18 +_ 0.33 mm/yr\ntrend = 26.20 +_ 0.24 mm/yr\ntrend = 37.31 +_ 1.80 mm/yr\ntrend = 26.64 +_ 0.64 mm/yr\ntrend = 24.15 +_ 0.44 mm/yr\ntrend = 25.76 +_ 0.67 mm/yr\ntrend = 26.81 +_ 0.23 mm/yr\ntrend = 26.62 +_ 0.27 mm/yr\ntrend = 40643675.46 +_ 35064805.14 mm/yr\ntrend = 26.95 +_ 0.46 mm/yr\ntrend = 26.23 +_ 0.39 mm/yr\ntrend = 25.61 +_ 0.55 mm/yr\ntrend = 27.79 +_ 0.25 mm/yr\ntrend = 29.39 +_ 0.64 mm/yr\ntrend = 27.49 +_ 0.49 mm/yr\ntrend = 27.10 +_ 0.30 mm/yr\ntrend = 27.02 +_ 0.44 mm/yr\ntrend = 26.97 +_ 0.51 mm/yr\ntrend = 26.76 +_ 0.26 mm/yr\ntrend = 29.29 +_ 1.37 mm/yr\ntrend = 792534.93 +_ 88377.50 mm/yr\ntrend = 27.50 +_ 0.40 mm/yr\ntrend = 27.47 +_ 0.27 mm/yr\ntrend = 27.34 +_ 0.29 mm/yr\ntrend = 28.08 +_ 0.26 mm/yr\ntrend = 25.61 +_ 1.45 mm/yr\ntrend = 25.68 +_ 0.32 mm/yr\ntrend = 28.42 +_ 0.31 mm/yr\ntrend = 25.29 +_ 0.39 mm/yr\ntrend = 25.42 +_ 0.62 mm/yr\ntrend = 25.57 +_ 0.55 mm/yr\ntrend = 46.37 +_ 4.87 mm/yr\ntrend = 25.98 +_ 0.44 mm/yr\ntrend = 27.54 +_ 0.30 mm/yr\ntrend = 26.89 +_ 0.43 mm/yr\ntrend = 26.64 +_ 0.29 mm/yr\ntrend = 27.05 +_ 0.34 mm/yr\ntrend = 27.37 +_ 0.24 mm/yr\ntrend = 25.91 +_ 0.30 mm/yr\ntrend = 27.27 +_ 0.22 mm/yr\ntrend = 27.39 +_ 0.58 mm/yr\ntrend = 27.43 +_ 0.27 mm/yr\ntrend = 26.87 +_ 0.27 mm/yr\ntrend = 27.40 +_ 0.35 mm/yr\ntrend = 26.64 +_ 0.40 mm/yr\ntrend = 27.21 +_ 0.29 mm/yr\ntrend = 26.75 +_ 0.55 mm/yr\ntrend = 20.38 +_ 1.22 mm/yr\ntrend = 26.16 +_ 0.55 mm/yr\ntrend = 26.05 +_ 0.30 mm/yr\ntrend = 27.02 +_ 0.24 mm/yr\ntrend = 26.39 +_ 0.34 mm/yr\ntrend = 25.83 +_ 0.31 mm/yr\ntrend = 26.85 +_ 0.43 mm/yr\ntrend = 26.81 +_ 0.35 mm/yr\ntrend = 26.63 +_ 0.38 mm/yr\ntrend = 23.90 +_ 1.96 mm/yr\ntrend = 28.30 +_ 0.21 mm/yr\ntrend = 26.97 +_ 0.36 mm/yr\ntrend = 26.06 +_ 0.45 mm/yr\ntrend = 27.05 +_ 1.65 mm/yr\ntrend = 26.62 +_ 0.28 mm/yr\ntrend = 26.22 +_ 0.45 mm/yr\ntrend = 26.57 +_ 1.29 mm/yr\ntrend = 26.50 +_ 0.34 mm/yr\ntrend = 25.77 +_ 0.32 mm/yr\ntrend = 26.86 +_ 0.17 mm/yr\ntrend = 26.48 +_ 0.28 mm/yr\ntrend = 27.66 +_ 0.50 mm/yr\ntrend = 31.27 +_ 0.59 mm/yr\ntrend = 27.39 +_ 0.24 mm/yr\ntrend = 28.04 +_ 0.63 mm/yr\ntrend = 26.95 +_ 0.37 mm/yr\ntrend = 2.06 +_ 1.68 mm/yr\ntrend = 1.63 +_ 3.65 mm/yr\ntrend = 3.06 +_ 1.27 mm/yr\ntrend = 2.52 +_ 1.23 mm/yr\ntrend = 3.22 +_ 1.18 mm/yr\ntrend = 1.48 +_ 5.70 mm/yr\ntrend = 0.45 +_ 1.33 mm/yr\ntrend = 2.22 +_ 0.87 mm/yr\ntrend = 0.12 +_ 3.37 mm/yr\ntrend = 0.33 +_ 1.59 mm/yr\ntrend = 1.04 +_ 3.04 mm/yr\ntrend = 0.07 +_ 3.82 mm/yr\ntrend = 1.01 +_ 1.63 mm/yr\ntrend = 2.28 +_ 1.87 mm/yr\ntrend = 1.23 +_ 3.25 mm/yr\ntrend = 610.54 +_ 82.40 mm/yr\ntrend = 0.93 +_ 4.54 mm/yr\ntrend = 0.56 +_ 4.38 mm/yr\ntrend = 0.97 +_ 4.43 mm/yr\ntrend = 1.26 +_ 1.05 mm/yr\ntrend = 1.16 +_ 1.86 mm/yr\ntrend = 228232168.72 +_ 196904267.59 mm/yr\ntrend = 0.86 +_ 2.64 mm/yr\ntrend = 0.91 +_ 1.06 mm/yr\ntrend = 5.95 +_ 1.29 mm/yr\ntrend = 1.81 +_ 1.28 mm/yr\ntrend = 0.06 +_ 1.70 mm/yr\ntrend = 1.45 +_ 2.95 mm/yr\ntrend = 1.35 +_ 4.60 mm/yr\ntrend = 1.38 +_ 1.51 mm/yr\ntrend = 2.13 +_ 2.50 mm/yr\ntrend = 1.32 +_ 3.45 mm/yr\ntrend = 0.84 +_ 2.82 mm/yr\ntrend = 1035.81 +_ 172.89 mm/yr\ntrend = 2.49 +_ 2.42 mm/yr\ntrend = 2.62 +_ 0.99 mm/yr\ntrend = 2.06 +_ 1.42 mm/yr\ntrend = 1.63 +_ 4.04 mm/yr\ntrend = 0.65 +_ 1.62 mm/yr\ntrend = 1.86 +_ 3.57 mm/yr\ntrend = 0.28 +_ 3.60 mm/yr\ntrend = 0.74 +_ 2.68 mm/yr\ntrend = 0.71 +_ 1.80 mm/yr\ntrend = 1.04 +_ 2.31 mm/yr\ntrend = 542.70 +_ 63.55 mm/yr\ntrend = 2.44 +_ 2.95 mm/yr\ntrend = 1.26 +_ 2.57 mm/yr\ntrend = 1.02 +_ 1.28 mm/yr\ntrend = 1.00 +_ 1.84 mm/yr\ntrend = 0.08 +_ 4.38 mm/yr\ntrend = 1.63 +_ 2.00 mm/yr\ntrend = 0.24 +_ 1.14 mm/yr\ntrend = 2.23 +_ 1.25 mm/yr\ntrend = 0.59 +_ 2.93 mm/yr\ntrend = 1.12 +_ 1.86 mm/yr\ntrend = 1.59 +_ 1.15 mm/yr\ntrend = 1.35 +_ 1.20 mm/yr\ntrend = 2.07 +_ 2.38 mm/yr\ntrend = 2.79 +_ 1.67 mm/yr\ntrend = 0.15 +_ 1.41 mm/yr\ntrend = 7.23 +_ 1.60 mm/yr\ntrend = 0.69 +_ 1.74 mm/yr\ntrend = 1.07 +_ 3.49 mm/yr\ntrend = 1.13 +_ 4.25 mm/yr\ntrend = 0.73 +_ 1.55 mm/yr\ntrend = 0.70 +_ 8.53 mm/yr\ntrend = 1.79 +_ 5.04 mm/yr\ntrend = 3.72 +_ 1.60 mm/yr\ntrend = 1.94 +_ 1.90 mm/yr\ntrend = 0.34 +_ 1.08 mm/yr\ntrend = 4.77 +_ 0.91 mm/yr\ntrend = 1.98 +_ 1.52 mm/yr\ntrend = 3.20 +_ 1.28 mm/yr\ntrend = 1.61 +_ 2.90 mm/yr\ntrend = 1.21 +_ 6.53 mm/yr\ntrend = 1.88 +_ 5.14 mm/yr\ntrend = 1.80 +_ 1.79 mm/yr\ntrend = 1.14 +_ 4.48 mm/yr\ntrend = 0.72 +_ 4.91 mm/yr\ntrend = 0.58 +_ 3.86 mm/yr\ntrend = 1.07 +_ 4.09 mm/yr\ntrend = 1.07 +_ 1.08 mm/yr\ntrend = 2.50 +_ 1.20 mm/yr\ntrend = 0.76 +_ 1.57 mm/yr\ntrend = 0.62 +_ 1.86 mm/yr\ntrend = 4.38 +_ 1.63 mm/yr"
+  },
+  {
+    "station_pdf": "data/stations/QGEO-KZ_Preliminary_Stability_Assessment_MIRASpaco-1.pdf",
+    "method": "pdfplumber",
+    "values": {
+      "V_E_mm_per_yr": {
+        "value": "2.5",
+        "uncertainty": null,
+        "match": "east 2.5 "
+      },
+      "V_N_mm_per_yr": {
+        "value": "5",
+        "uncertainty": null,
+        "match": "5"
+      }
+    },
+    "snippet": "TECHNICAL REPORT\nAssessment of the Stability of the\nQGEO-KZ GNSS Network\nPrepared by:\nRui Fernandes\nPrepared for: QGEO\nDate: 22 July 2026\nStatus: First computation - preliminary results\nReport – QGEO-KZ – Preliminary Stability Assessment\nExecutive Summary\nThis report presents an initial assessment of the temporal stability of the QGEO-KZ GNSS\nstations. The main objective is to identify the stations showing the most promising behaviour\nfor more detailed evaluation as potential candidates for subm"
+  },
+  {
+    "station_pdf": "data/stations/bush.pdf",
+    "method": "positioned",
+    "values": {
+      "V_N_mm_per_yr": {
+        "value": "0.81",
+        "uncertainty": "0.63",
+        "match": "trend = 0.81 +_ 0.63 mm/yr"
+      },
+      "V_E_mm_per_yr": {
+        "value": "27.99",
+        "uncertainty": "0.34",
+        "match": "trend = 27.99 +_ 0.34 mm/yr"
+      },
+      "V_U_mm_per_yr": {
+        "value": "0.45",
+        "uncertainty": "1.33",
+        "match": "trend = 0.45 +_ 1.33 mm/yr"
+      }
+    },
+    "snippet": "trend = 0.81 +_ 0.63 mm/yr\ntrend = 27.99 +_ 0.34 mm/yr\ntrend = 0.45 +_ 1.33 mm/yr"
+  },
+  {
+    "station_pdf": "data/stations/cksh.pdf",
+    "method": "positioned",
+    "values": {
+      "V_N_mm_per_yr": {
+        "value": "2.05",
+        "uncertainty": "0.90",
+        "match": "trend = 2.05 +_ 0.90 mm/yr"
+      },
+      "V_E_mm_per_yr": {
+        "value": "26.45",
+        "uncertainty": "0.29",
+        "match": "trend = 26.45 +_ 0.29 mm/yr"
+      },
+      "V_U_mm_per_yr": {
+        "value": "0.07",
+        "uncertainty": "3.82",
+        "match": "trend = 0.07 +_ 3.82 mm/yr"
+      }
+    },
+    "snippet": "trend = 2.05 +_ 0.90 mm/yr\ntrend = 26.45 +_ 0.29 mm/yr\ntrend = 0.07 +_ 3.82 mm/yr"
+  },
+  {
+    "station_pdf": "data/stations/dboz.pdf",
+    "method": "positioned",
+    "values": {
+      "V_N_mm_per_yr": {
+        "value": "4.94",
+        "uncertainty": "0.72",
+        "match": "trend = 4.94 +_ 0.72 mm/yr"
+      },
+      "V_E_mm_per_yr": {
+        "value": "26.18",
+        "uncertainty": "0.33",
+        "match": "trend = 26.18 +_ 0.33 mm/yr"
+      },
+      "V_U_mm_per_yr": {
+        "value": "2.28",
+        "uncertainty": "1.87",
+        "match": "trend = 2.28 +_ 1.87 mm/yr"
+      }
+    },
+    "snippet": "trend = 4.94 +_ 0.72 mm/yr\ntrend = 26.18 +_ 0.33 mm/yr\ntrend = 2.28 +_ 1.87 mm/yr"
+  },
+  {
+    "station_pdf": "data/stations/dyrg.pdf",
+    "method": "positioned",
+    "values": {
+      "V_N_mm_per_yr": {
+        "value": "4.28",
+        "uncertainty": "0.94",
+        "match": "trend = 4.28 +_ 0.94 mm/yr"
+      },
+      "V_E_mm_per_yr": {
+        "value": "24.15",
+        "uncertainty": "0.44",
+        "match": "trend = 24.15 +_ 0.44 mm/yr"
+      },
+      "V_U_mm_per_yr": {
+        "value": "0.56",
+        "uncertainty": "4.38",
+        "match": "trend = 0.56 +_ 4.38 mm/yr"
+      }
+    },
+    "snippet": "trend = 4.28 +_ 0.94 mm/yr\ntrend = 24.15 +_ 0.44 mm/yr\ntrend = 0.56 +_ 4.38 mm/yr"
+  },
+  {
+    "station_pdf": "data/stations/eind.pdf",
+    "method": "positioned",
+    "values": {
+      "V_N_mm_per_yr": {
+        "value": "6.59",
+        "uncertainty": "0.88",
+        "match": "trend = 6.59 +_ 0.88 mm/yr"
+      },
+      "V_E_mm_per_yr": {
+        "value": "26.95",
+        "uncertainty": "0.46",
+        "match": "trend = 26.95 +_ 0.46 mm/yr"
+      },
+      "V_U_mm_per_yr": {
+        "value": "0.86",
+        "uncertainty": "2.64",
+        "match": "trend = 0.86 +_ 2.64 mm/yr"
+      }
+    },
+    "snippet": "trend = 6.59 +_ 0.88 mm/yr\ntrend = 26.95 +_ 0.46 mm/yr\ntrend = 0.86 +_ 2.64 mm/yr"
+  },
+  {
+    "station_pdf": "data/stations/fckp.pdf",
+    "method": "positioned",
+    "values": {
+      "V_N_mm_per_yr": {
+        "value": "0.72",
+        "uncertainty": "0.92",
+        "match": "trend = 0.72 +_ 0.92 mm/yr"
+      },
+      "V_E_mm_per_yr": {
+        "value": "27.49",
+        "uncertainty": "0.49",
+        "match": "trend = 27.49 +_ 0.49 mm/yr"
+      },
+      "V_U_mm_per_yr": {
+        "value": "1.45",
+        "uncertainty": "2.95",
+        "match": "trend = 1.45 +_ 2.95 mm/yr"
+      }
+    },
+    "snippet": "trend = 0.72 +_ 0.92 mm/yr\ntrend = 27.49 +_ 0.49 mm/yr\ntrend = 1.45 +_ 2.95 mm/yr"
+  },
+  {
+    "station_pdf": "data/stations/lora.pdf",
+    "method": "positioned",
+    "values": {
+      "V_N_mm_per_yr": {
+        "value": "7.38",
+        "uncertainty": "1.00",
+        "match": "trend = 7.38 +_ 1.00 mm/yr"
+      },
+      "V_E_mm_per_yr": {
+        "value": "25.42",
+        "uncertainty": "0.62",
+        "match": "trend = 25.42 +_ 0.62 mm/yr"
+      },
+      "V_U_mm_per_yr": {
+        "value": "0.71",
+        "uncertainty": "1.80",
+        "match": "trend = 0.71 +_ 1.80 mm/yr"
+      }
+    },
+    "snippet": "trend = 7.38 +_ 1.00 mm/yr\ntrend = 25.42 +_ 0.62 mm/yr\ntrend = 0.71 +_ 1.80 mm/yr"
+  },
+  {
+    "station_pdf": "data/stations/makd.pdf",
+    "method": "positioned",
+    "values": {
+      "V_N_mm_per_yr": {
+        "value": "2.71",
+        "uncertainty": "1.10",
+        "match": "trend = 2.71 +_ 1.10 mm/yr"
+      },
+      "V_E_mm_per_yr": {
+        "value": "25.98",
+        "uncertainty": "0.44",
+        "match": "trend = 25.98 +_ 0.44 mm/yr"
+      },
+      "V_U_mm_per_yr": {
+        "value": "2.44",
+        "uncertainty": "2.95",
+        "match": "trend = 2.44 +_ 2.95 mm/yr"
+      }
+    },
+    "snippet": "trend = 2.71 +_ 1.10 mm/yr\ntrend = 25.98 +_ 0.44 mm/yr\ntrend = 2.44 +_ 2.95 mm/yr"
+  },
+  {
+    "station_pdf": "data/stations/mkrj.pdf",
+    "method": "positioned",
+    "values": {
+      "V_N_mm_per_yr": {
+        "value": "2.47",
+        "uncertainty": "0.85",
+        "match": "trend = 2.47 +_ 0.85 mm/yr"
+      },
+      "V_E_mm_per_yr": {
+        "value": "27.37",
+        "uncertainty": "0.24",
+        "match": "trend = 27.37 +_ 0.24 mm/yr"
+      },
+      "V_U_mm_per_yr": {
+        "value": "1.63",
+        "uncertainty": "2.00",
+        "match": "trend = 1.63 +_ 2.00 mm/yr"
+      }
+    },
+    "snippet": "trend = 2.47 +_ 0.85 mm/yr\ntrend = 27.37 +_ 0.24 mm/yr\ntrend = 1.63 +_ 2.00 mm/yr"
+  },
+  {
+    "station_pdf": "data/stations/msat.pdf",
+    "method": "positioned",
+    "values": {
+      "V_N_mm_per_yr": {
+        "value": "2.59",
+        "uncertainty": "0.82",
+        "match": "trend = 2.59 +_ 0.82 mm/yr"
+      },
+      "V_E_mm_per_yr": {
+        "value": "27.39",
+        "uncertainty": "0.58",
+        "match": "trend = 27.39 +_ 0.58 mm/yr"
+      },
+      "V_U_mm_per_yr": {
+        "value": "0.59",
+        "uncertainty": "2.93",
+        "match": "trend = 0.59 +_ 2.93 mm/yr"
+      }
+    },
+    "snippet": "trend = 2.59 +_ 0.82 mm/yr\ntrend = 27.39 +_ 0.58 mm/yr\ntrend = 0.59 +_ 2.93 mm/yr"
+  },
+  {
+    "station_pdf": "data/stations/nars.pdf",
+    "method": "positioned",
+    "values": {
+      "V_N_mm_per_yr": {
+        "value": "4.71",
+        "uncertainty": "1.15",
+        "match": "trend = 4.71 +_ 1.15 mm/yr"
+      },
+      "V_E_mm_per_yr": {
+        "value": "26.87",
+        "uncertainty": "0.27",
+        "match": "trend = 26.87 +_ 0.27 mm/yr"
+      },
+      "V_U_mm_per_yr": {
+        "value": "1.59",
+        "uncertainty": "1.15",
+        "match": "trend = 1.59 +_ 1.15 mm/yr"
+      }
+    },
+    "snippet": "trend = 4.71 +_ 1.15 mm/yr\ntrend = 26.87 +_ 0.27 mm/yr\ntrend = 1.59 +_ 1.15 mm/yr"
+  },
+  {
+    "station_pdf": "data/stations/puzk.pdf",
+    "method": "positioned",
+    "values": {
+      "V_N_mm_per_yr": {
+        "value": "3.46",
+        "uncertainty": "0.97",
+        "match": "trend = 3.46 +_ 0.97 mm/yr"
+      },
+      "V_E_mm_per_yr": {
+        "value": "25.83",
+        "uncertainty": "0.31",
+        "match": "trend = 25.83 +_ 0.31 mm/yr"
+      },
+      "V_U_mm_per_yr": {
+        "value": "0.70",
+        "uncertainty": "8.53",
+        "match": "trend = 0.70 +_ 8.53 mm/yr"
+      }
+    },
+    "snippet": "trend = 3.46 +_ 0.97 mm/yr\ntrend = 25.83 +_ 0.31 mm/yr\ntrend = 0.70 +_ 8.53 mm/yr"
+  },
+  {
+    "station_pdf": "data/stations/pzht.pdf",
+    "method": "positioned",
+    "values": {
+      "V_N_mm_per_yr": {
+        "value": "4.24",
+        "uncertainty": "0.73",
+        "match": "trend = 4.24 +_ 0.73 mm/yr"
+      },
+      "V_E_mm_per_yr": {
+        "value": "26.85",
+        "uncertainty": "0.43",
+        "match": "trend = 26.85 +_ 0.43 mm/yr"
+      },
+      "V_U_mm_per_yr": {
+        "value": "1.79",
+        "uncertainty": "5.04",
+        "match": "trend = 1.79 +_ 5.04 mm/yr"
+      }
+    },
+    "snippet": "trend = 4.24 +_ 0.73 mm/yr\ntrend = 26.85 +_ 0.43 mm/yr\ntrend = 1.79 +_ 5.04 mm/yr"
+  },
+  {
+    "station_pdf": "data/stations/rakt.pdf",
+    "method": "positioned",
+    "values": {
+      "V_N_mm_per_yr": {
+        "value": "7.12",
+        "uncertainty": "0.85",
+        "match": "trend = 7.12 +_ 0.85 mm/yr"
+      },
+      "V_E_mm_per_yr": {
+        "value": "26.81",
+        "uncertainty": "0.35",
+        "match": "trend = 26.81 +_ 0.35 mm/yr"
+      },
+      "V_U_mm_per_yr": {
+        "value": "3.72",
+        "uncertainty": "1.60",
+        "match": "trend = 3.72 +_ 1.60 mm/yr"
+      }
+    },
+    "snippet": "trend = 7.12 +_ 0.85 mm/yr\ntrend = 26.81 +_ 0.35 mm/yr\ntrend = 3.72 +_ 1.60 mm/yr"
+  },
+  {
+    "station_pdf": "data/stations/rbey.pdf",
+    "method": "positioned",
+    "values": {
+      "V_N_mm_per_yr": {
+        "value": "5.89",
+        "uncertainty": "0.48",
+        "match": "trend = 5.89 +_ 0.48 mm/yr"
+      },
+      "V_E_mm_per_yr": {
+        "value": "26.63",
+        "uncertainty": "0.38",
+        "match": "trend = 26.63 +_ 0.38 mm/yr"
+      },
+      "V_U_mm_per_yr": {
+        "value": "1.94",
+        "uncertainty": "1.90",
+        "match": "trend = 1.94 +_ 1.90 mm/yr"
+      }
+    },
+    "snippet": "trend = 5.89 +_ 0.48 mm/yr\ntrend = 26.63 +_ 0.38 mm/yr\ntrend = 1.94 +_ 1.90 mm/yr"
+  },
+  {
+    "station_pdf": "data/stations/sekb.pdf",
+    "method": "positioned",
+    "values": {
+      "V_N_mm_per_yr": {
+        "value": "0.73",
+        "uncertainty": "0.70",
+        "match": "trend = 0.73 +_ 0.70 mm/yr"
+      },
+      "V_E_mm_per_yr": {
+        "value": "26.62",
+        "uncertainty": "0.28",
+        "match": "trend = 26.62 +_ 0.28 mm/yr"
+      },
+      "V_U_mm_per_yr": {
+        "value": "1.21",
+        "uncertainty": "6.53",
+        "match": "trend = 1.21 +_ 6.53 mm/yr"
+      }
+    },
+    "snippet": "trend = 0.73 +_ 0.70 mm/yr\ntrend = 26.62 +_ 0.28 mm/yr\ntrend = 1.21 +_ 6.53 mm/yr"
+  },
+  {
+    "station_pdf": "data/stations/sshb.pdf",
+    "method": "positioned",
+    "values": {
+      "V_N_mm_per_yr": {
+        "value": "1.17",
+        "uncertainty": "0.78",
+        "match": "trend = 1.17 +_ 0.78 mm/yr"
+      },
+      "V_E_mm_per_yr": {
+        "value": "26.50",
+        "uncertainty": "0.34",
+        "match": "trend = 26.50 +_ 0.34 mm/yr"
+      },
+      "V_U_mm_per_yr": {
+        "value": "1.14",
+        "uncertainty": "4.48",
+        "match": "trend = 1.14 +_ 4.48 mm/yr"
+      }
+    },
+    "snippet": "trend = 1.17 +_ 0.78 mm/yr\ntrend = 26.50 +_ 0.34 mm/yr\ntrend = 1.14 +_ 4.48 mm/yr"
+  },
+  {
+    "station_pdf": "data/stations/tnis.pdf",
+    "method": "positioned",
+    "values": {
+      "V_N_mm_per_yr": {
+        "value": "4.54",
+        "uncertainty": "1.51",
+        "match": "trend = 4.54 +_ 1.51 mm/yr"
+      },
+      "V_E_mm_per_yr": {
+        "value": "25.77",
+        "uncertainty": "0.32",
+        "match": "trend = 25.77 +_ 0.32 mm/yr"
+      },
+      "V_U_mm_per_yr": {
+        "value": "0.72",
+        "uncertainty": "4.91",
+        "match": "trend = 0.72 +_ 4.91 mm/yr"
+      }
+    },
+    "snippet": "trend = 4.54 +_ 1.51 mm/yr\ntrend = 25.77 +_ 0.32 mm/yr\ntrend = 0.72 +_ 4.91 mm/yr"
+  },
+  {
+    "station_pdf": "data/stations/znur.pdf",
+    "method": "positioned",
+    "values": {
+      "V_N_mm_per_yr": {
+        "value": "2.14",
+        "uncertainty": "1.10",
+        "match": "trend = 2.14 +_ 1.10 mm/yr"
+      },
+      "V_E_mm_per_yr": {
+        "value": "26.95",
+        "uncertainty": "0.37",
+        "match": "trend = 26.95 +_ 0.37 mm/yr"
+      },
+      "V_U_mm_per_yr": {
+        "value": "4.38",
+        "uncertainty": "1.63",
+        "match": "trend = 4.38 +_ 1.63 mm/yr"
+      }
+    },
+    "snippet": "trend = 2.14 +_ 1.10 mm/yr\ntrend = 26.95 +_ 0.37 mm/yr\ntrend = 4.38 +_ 1.63 mm/yr"
+  }
+]
