@@ -113,21 +113,33 @@
 
         
     
-                        var tile_layer_a937a5466fa32d791c0ed8d44ba6df2d = L.tileLayer(
-                                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
-                {
-  "minZoom": 0,
-  "maxZoom": 20,
-  "maxNativeZoom": 20,
-  "noWrap": false,
-    "attribution": "\u0026copy; <a href=\"https://www.openstreetmap.org/copyright\">OpenStreetMap</a> contributors",
-    "subdomains": "abc",
-  "detectRetina": false,
-  "tms": false,
-  "opacity": 1,
-}
+                        // Tile configuration: can be overridden by assets/config.js which should define `window.TILE_CONFIG`.
+                        // Provide a local `assets/config.js` (not committed) with e.g.:
+                        // window.TILE_CONFIG = { url: 'https://api.maptiler.com/maps/streets/{z}/{x}/{y}.png?key=YOUR_KEY', attribution: '© MapTiler', options: { maxZoom: 20 } };
+                        var defaultTileUrl = "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png";
+                        var defaultAttribution = "\u0026copy; <a href=\"https://www.openstreetmap.org/copyright\">OpenStreetMap</a> contributors";
+                        var tileUrl = defaultTileUrl;
+                        var tileAttribution = defaultAttribution;
+                        var tileOptions = {
+              "minZoom": 0,
+              "maxZoom": 20,
+              "maxNativeZoom": 20,
+              "noWrap": false,
+              "subdomains": "abc",
+              "detectRetina": false,
+              "tms": false,
+              "opacity": 1,
+            };
 
-            );
+                        if (window.TILE_CONFIG && typeof window.TILE_CONFIG === 'object') {
+                            if (TILE_CONFIG.url) tileUrl = TILE_CONFIG.url;
+                            if (TILE_CONFIG.attribution) tileAttribution = TILE_CONFIG.attribution;
+                            if (TILE_CONFIG.options && typeof TILE_CONFIG.options === 'object') {
+                                Object.assign(tileOptions, TILE_CONFIG.options);
+                            }
+                        }
+
+                        var tile_layer_a937a5466fa32d791c0ed8d44ba6df2d = L.tileLayer(tileUrl, Object.assign({}, tileOptions, { attribution: tileAttribution }));
         
     
             tile_layer_a937a5466fa32d791c0ed8d44ba6df2d.addTo(map_6622ef269f71f6d15bf7fd27db439382);
