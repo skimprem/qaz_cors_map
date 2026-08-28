@@ -55,7 +55,10 @@ gdf['Stations table'] = station_codes.apply(
 
 index_map = kazakhstan.explore(
     color='none',
-    tiles='CartoDB positron',
+    # CartoDB's free anonymous tiles now require an API key (watermark
+    # instead of the basemap). OpenStreetMap is free, keyless, and the
+    # most reliably-loading option; more muted than CartoDB Positron was.
+    tiles='OpenStreetMap',
     zoom_start=5,
     tooltip=False,
     style_kwds={
