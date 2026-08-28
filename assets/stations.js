@@ -71,23 +71,33 @@ document.addEventListener('DOMContentLoaded', () => {
     // build inner table of selected fields
     const detailTable = document.createElement('table')
     detailTable.className = 'detail-table'
+    // [record key, display label]; date/count fields already shown in the
+    // main table (First_obs, Last_obs, Span_yr, Available, Processed,
+    // Not_estimated) are intentionally left out here to avoid duplication
     const fields = [
-      'IGS_ID','SiteName','Latitude_deg','Longitude_deg','Ellipsoidal_height_m','Monument_type','Antenna_model','Antenna_serial','Antenna_height_m','Receiver_model','Obs_start_date','Obs_last_date','Obs_span_yr','Data_availability_count','Processed_count','Not_estimated_count','Repeatability_N_mm','Repeatability_E_mm','Repeatability_U_mm','Velocity_N_mm_per_yr','Velocity_E_mm_per_yr','Velocity_U_mm_per_yr','Discontinuities_notes','Regional_consistency_flag','DOMES_number','Data_transfer_method','Archive_centres','SiteLog_URL','Site_photos_URLs','Operator_institution','Contact_email','Commitment_3yr','AnnexA_plot_path','Status_recommendation','Notes_action_items'
+      ['IGS_ID', 'IGS ID'], ['SiteName', 'Site Name'],
+      ['Latitude_deg', 'Latitude (deg)'], ['Longitude_deg', 'Longitude (deg)'],
+      ['Ellipsoidal_height_m', 'Ellipsoidal height (m)'], ['Monument_type', 'Monument type'],
+      ['Antenna_model', 'Antenna model'], ['Antenna_serial', 'Antenna serial'],
+      ['Antenna_height_m', 'Antenna height (m)'], ['Receiver_model', 'Receiver model'],
+      ['Repeatability_N_mm', 'Repeatability N (mm)'], ['Repeatability_E_mm', 'Repeatability E (mm)'],
+      ['Repeatability_U_mm', 'Repeatability U (mm)'],
+      ['Velocity_N_mm_per_yr', 'Velocity N'], ['Velocity_E_mm_per_yr', 'Velocity E'],
+      ['Velocity_U_mm_per_yr', 'Velocity U'],
+      ['Discontinuities_notes', 'Discontinuities notes'], ['Regional_consistency_flag', 'Regional consistency flag'],
+      ['DOMES_number', 'DOMES number'], ['Data_transfer_method', 'Data transfer method'],
+      ['Archive_centres', 'Archive centres'], ['SiteLog_URL', 'SiteLog URL'],
+      ['Site_photos_URLs', 'Site photos URLs'], ['Operator_institution', 'Operator institution'],
+      ['Contact_email', 'Contact email'], ['Commitment_3yr', 'Commitment 3yr'],
+      ['AnnexA_plot_path', 'AnnexA plot path'], ['Status_recommendation', 'Status recommendation'],
+      ['Notes_action_items', 'Notes action items'],
     ]
-    fields.forEach(f => {
+    fields.forEach(([f, label]) => {
       const tr = document.createElement('tr')
       const th = document.createElement('th')
-      // present human-friendly header and units for velocity fields
-      let displayName = f
-      let unit = ''
-      if (f.startsWith('Velocity_')) {
-        // e.g. 'Velocity_N_mm_per_yr' -> 'Velocity N' with unit 'mm/yr'
-        const parts = f.split('_')
-        // parts[1] = N/E/U
-        displayName = `Velocity ${parts[1]}`
-        unit = 'mm/yr'
-      }
-      th.textContent = displayName + (unit ? ' (' + unit + ')' : '')
+      // present units alongside velocity fields
+      const unit = f.startsWith('Velocity_') ? 'mm/yr' : ''
+      th.textContent = label + (unit ? ' (' + unit + ')' : '')
       const val = document.createElement('td')
       // use value from record if present, otherwise blank
       // show uncertainties next to velocity fields if available
