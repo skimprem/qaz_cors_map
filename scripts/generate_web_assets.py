@@ -35,6 +35,33 @@ WEB_DIR = ROOT / 'data' / 'web'
 IMG_DIR = WEB_DIR / 'station_images'
 STATIONS_PDF = ROOT / 'data' / 'stations'
 
+# fields sourced from the SLM API (see slm_api.build_station_map); SLM is the
+# single source of truth for these, so they're always refreshed on each run
+SLM_FIELDS = [
+    'IGS_ID', 'SiteName', 'Latitude_deg', 'Longitude_deg', 'Ellipsoidal_height_m',
+    'Antenna_model', 'Antenna_serial', 'Antenna_height_m',
+    'Receiver_model', 'Receiver_serial', 'DOMES_number', 'Operator_institution',
+]
+
+
+def sync_csv_from_slm(df, excel_map):
+    """Stamp SLM-sourced fields into the candidates CSV, keyed by 4-char Site code."""
+    for field in SLM_FIELDS:
+        if field not in df.columns:
+            df[field] = ''
+    updated = 0
+    for idx, row in df.iterrows():
+        site = str(row.get('Site', '')).strip().upper()
+        info = excel_map.get(site)
+        if not info:
+            continue
+        for field in SLM_FIELDS:
+            value = '' if info.get(field) is None else str(info.get(field, ''))
+            if df.at[idx, field] != value:
+                df.at[idx, field] = value
+                updated += 1
+    return updated
+
 
 def ensure_dirs():
     WEB_DIR.mkdir(parents=True, exist_ok=True)
@@ -60,6 +87,11 @@ def write_json():
     stations = get_stations()
     excel_map = build_station_map(stations)
     print(f'Loaded {len(excel_map)} stations from SLM API')
+
+    csv_updated = sync_csv_from_slm(df, excel_map)
+    if csv_updated:
+        df.to_csv(CSV_IN, index=False)
+    print(f'Synced {csv_updated} SLM-sourced cells into {CSV_IN}')
 
     records = []
     for _, row in df.iterrows():

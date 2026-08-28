@@ -79,6 +79,9 @@ def build_station_map(stations, code_length=4):
         code = name[:code_length]
 
         lat, lon, height = (list(s.get('llh') or ()) + [None, None, None])[:3]
+        # antenna_marker_une is (Up, North, East) eccentricity of the antenna
+        # reference point above the survey marker, i.e. the antenna height
+        antenna_height = (list(s.get('antenna_marker_une') or ()) + [None])[0]
 
         agencies = s.get('agencies') or []
         operator = ''
@@ -95,6 +98,7 @@ def build_station_map(stations, code_length=4):
             'Ellipsoidal_height_m': height,
             'Antenna_model': s.get('antenna_type') or '',
             'Antenna_serial': s.get('antenna_serial_number') or '',
+            'Antenna_height_m': antenna_height,
             'Receiver_model': s.get('receiver_type') or '',
             'Receiver_serial': s.get('serial_number') or '',
             'DOMES_number': s.get('domes_number') or '',
