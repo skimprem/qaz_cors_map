@@ -114,7 +114,7 @@
     "Processed": "1386",
     "Not_estimated": "33",
     "No_solution": "0",
-    "source_file": "data/processed/QGEO-KZ_Preliminary_Stability_Assessment_MIRASpaco/table_page004_idx01.csv",
+    "source_file": "data/processed/candidates_summary/candidates_summary.csv",
     "Velocity_N_uncertainty_mm_per_yr": "1.00",
     "Velocity_E_uncertainty_mm_per_yr": "0.62",
     "Velocity_U_uncertainty_mm_per_yr": "1.80"
@@ -174,7 +174,7 @@
     "Processed": "1015",
     "Not_estimated": "248",
     "No_solution": "0",
-    "source_file": "data/processed/QGEO-KZ_Preliminary_Stability_Assessment_MIRASpaco/table_page005_idx01.csv",
+    "source_file": "data/processed/candidates_summary/candidates_summary.csv",
     "Velocity_N_uncertainty_mm_per_yr": "0.48",
     "Velocity_E_uncertainty_mm_per_yr": "0.38",
     "Velocity_U_uncertainty_mm_per_yr": "1.90"
@@ -354,7 +354,7 @@
     "Processed": "1402",
     "Not_estimated": "20",
     "No_solution": "0",
-    "source_file": "data/processed/candidates_summary/candidates_summary.csv",
+    "source_file": "data/processed/QGEO-KZ_Preliminary_Stability_Assessment_MIRASpaco/table_page004_idx01.csv",
     "Velocity_N_uncertainty_mm_per_yr": "0.94",
     "Velocity_E_uncertainty_mm_per_yr": "0.44",
     "Velocity_U_uncertainty_mm_per_yr": "4.38"
@@ -414,7 +414,7 @@
     "Processed": "1154",
     "Not_estimated": "8",
     "No_solution": "0",
-    "source_file": "data/processed/QGEO-KZ_Preliminary_Stability_Assessment_MIRASpaco/table_page005_idx01.csv",
+    "source_file": "data/processed/candidates_summary/candidates_summary.csv",
     "Velocity_N_uncertainty_mm_per_yr": "1.15",
     "Velocity_E_uncertainty_mm_per_yr": "0.27",
     "Velocity_U_uncertainty_mm_per_yr": "1.15"
@@ -474,7 +474,7 @@
     "Processed": "1411",
     "Not_estimated": "12",
     "No_solution": "0",
-    "source_file": "data/processed/candidates_summary/candidates_summary.csv",
+    "source_file": "data/processed/QGEO-KZ_Preliminary_Stability_Assessment_MIRASpaco/table_page004_idx01.csv",
     "Velocity_N_uncertainty_mm_per_yr": "0.72",
     "Velocity_E_uncertainty_mm_per_yr": "0.33",
     "Velocity_U_uncertainty_mm_per_yr": "1.87"
@@ -774,7 +774,7 @@
     "Processed": "1384",
     "Not_estimated": "24",
     "No_solution": "0",
-    "source_file": "data/processed/candidates_summary/candidates_summary.csv",
+    "source_file": "data/processed/QGEO-KZ_Preliminary_Stability_Assessment_MIRASpaco/table_page005_idx01.csv",
     "Velocity_N_uncertainty_mm_per_yr": "0.82",
     "Velocity_E_uncertainty_mm_per_yr": "0.58",
     "Velocity_U_uncertainty_mm_per_yr": "2.93"

@@ -38,6 +38,22 @@ document.addEventListener('DOMContentLoaded', () => {
     })
     table.appendChild(tbody)
     container.appendChild(table)
+
+    openRequestedSite(tbody)
+  }
+
+  // if the page was opened as stations.html?site=EIND (e.g. from a map
+  // marker's popup link), expand and scroll to that station's row
+  function openRequestedSite(tbody) {
+    const wanted = (new URLSearchParams(window.location.search).get('site') || '').trim().toUpperCase()
+    if (!wanted) return
+    const siteLink = Array.from(tbody.querySelectorAll('.site-link'))
+      .find(a => a.textContent.trim().toUpperCase() === wanted)
+    if (!siteLink) return
+    siteLink.click()
+    const tr = siteLink.closest('tr')
+    tr.classList.add('highlighted')
+    tr.scrollIntoView({ behavior: 'smooth', block: 'center' })
   }
 
   const modal = document.getElementById('modal')

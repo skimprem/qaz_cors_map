@@ -13,3 +13,4 @@ table.candidates th{background:#f4f4f4}
 .detail-table th{width:30%;text-align:left;padding:6px;border-bottom:1px solid #eee}
 .detail-table td{padding:6px;border-bottom:1px solid #eee}
  .site-cell a{font-weight:600}
+table.candidates tr.highlighted{background:#fff6d6}
