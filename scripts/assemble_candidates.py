@@ -8,16 +8,22 @@ extracts per-site metrics and writes `data/processed/candidates_summary.csv` and
 from pathlib import Path
 import re
 import pandas as pd
+import yaml
 
 
 ROOT = Path(__file__).resolve().parents[1]
 PROCESSED = ROOT / 'data' / 'processed'
 OUT = PROCESSED / 'candidates_summary'
+CANDIDATES_YAML = ROOT / 'data' / 'candidates.yaml'
 
-CANDIDATES = [
-    'EIND','LORA','RBEY','RAKT','PZHT','DYRG','NARS','DBOZ','CKSH',
-    'PUZK','TNIS','MKRJ','MSAT','MAKD','SEKB','SSHB','FCKP','BUSH','ZNUR'
-]
+
+def load_candidates():
+    with open(CANDIDATES_YAML, 'r', encoding='utf-8') as f:
+        data = yaml.safe_load(f) or {}
+    return [str(c).strip().upper() for c in (data.get('stations') or [])]
+
+
+CANDIDATES = load_candidates()
 
 
 def is_site_code(s: str):

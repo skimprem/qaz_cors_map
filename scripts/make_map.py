@@ -38,6 +38,21 @@ gdf = gpd.GeoDataFrame(
     crs='EPSG:4326'
 )
 
+# link each candidate station's marker straight to its row in stations.html;
+# stations.html only lists the 19 IGS candidates, so other network stations
+# get no link here
+candidates_path = ROOT / 'data' / 'web' / 'candidates.json'
+candidate_codes = set()
+if candidates_path.exists():
+    with open(candidates_path, 'r', encoding='utf-8') as f:
+        candidate_codes = {rec.get('StationCode', '').upper() for rec in json.load(f)}
+
+station_codes = gdf['station_name'].astype(str).str[:4].str.upper()
+gdf['Stations table'] = station_codes.apply(
+    lambda code: f'<a href="stations.html?site={code}" target="_blank">Open in table &raquo;</a>'
+    if code in candidate_codes else ''
+)
+
 index_map = kazakhstan.explore(
     color='none',
     tiles='CartoDB positron',
@@ -57,21 +72,16 @@ for block_id in gdf['block'].unique():
         continue
     
     block_data = gdf[gdf['block'] == block_id]
-    pic_file = block_data['pic'].iloc[0] if 'pic' in block_data.columns and pd.notna(block_data['pic'].iloc[0]) else None
-    
+
     min_lat = block_data['latitude'].min() - margin
     max_lat = block_data['latitude'].max() + margin
     min_lon = block_data['longitude'].min() - margin
     max_lon = block_data['longitude'].max() + margin
-    
+
     # Создаем прямоугольник
     bounds = [[min_lat, min_lon], [max_lat, max_lon]]
-    
-    # HTML для попапа прямоугольника
-    popup_html = f'<b>Block {int(block_id)}</b><br>'
-    if pic_file:
-        popup_html += f'<a href="{pic_file}" target="_blank">View Block Image</a>'
-    
+    popup_html = f'<b>Block {int(block_id)}</b>'
+
     folium.Rectangle(
         bounds=bounds,
         color='blue',
@@ -91,5 +101,24 @@ gdf.explore(
     popup=True,
     legend=False
 )
+
+# gold ring around candidate stations so they stand out from the rest of the network
+for _, row in gdf[station_codes.isin(candidate_codes)].iterrows():
+    folium.CircleMarker(
+        location=[row['latitude'], row['longitude']],
+        radius=10,
+        color='#FFD700',
+        weight=3,
+        fill=False,
+        opacity=0.9,
+    ).add_to(index_map)
+
+# top-right so it doesn't overlap Leaflet's default zoom control (top-left)
+header_html = """
+<header style="position:absolute;top:10px;right:10px;z-index:4000;background:rgba(255,255,255,0.9);padding:6px;border-radius:4px;">
+    <a href="stations.html">Stations table</a>
+</header>
+"""
+index_map.get_root().html.add_child(folium.Element(header_html))
 
 index_map.save(ROOT / 'index.html')
