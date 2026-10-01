@@ -11,3 +11,7 @@ data/report/
 assets/config.js
 # generated/cropped thumbnails script output (images will be modified in-place)
 # (keep images in repo if you want; script runs locally)
+# Internal docs live in the private repo git.qgeo.kz/r.sermiagin/cors-network-docs
+data/instructions/
+data/processed/QGEO-KZ*/
+*_plan.md
